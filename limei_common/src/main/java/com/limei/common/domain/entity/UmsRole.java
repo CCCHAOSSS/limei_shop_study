@@ -1,8 +1,6 @@
-package com.limei.auth.domain.entry;
+package com.limei.common.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,17 +13,20 @@ import java.time.LocalDateTime;
 public class UmsRole implements Serializable {
 
     @TableId
-    private Long id;
+    private Long roleId;
     private String roleName;
     private String roleLabel;
     private Integer sort;
 
     private Integer status;
-    private String creater;
+    private String creator;
     private String updater;
+    private String remark;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
-    private String remake;
+
 
     @TableLogic
     private Integer deleted;

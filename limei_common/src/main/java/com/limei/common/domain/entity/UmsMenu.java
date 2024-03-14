@@ -1,8 +1,6 @@
-package com.limei.auth.domain.entry;
+package com.limei.common.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -25,11 +23,20 @@ public class UmsMenu implements Serializable {
     private Integer sort;
     private Integer status;
 
-    private String creater;
+    private String creator;
     private String updater;
+    private String remark;
+
+    //加入注解会自动填充，动作：INSERT_UPDATE
+    // 即更新和插入两种操作都会修改updateTime
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
+
+    //加入注解会自动填充，动作：INSERT
+    // 插入（新记录）时会createTime
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
-    private String remake;
+
 
     @TableLogic
     private Integer deleted;

@@ -1,9 +1,9 @@
-package com.limei.auth.domain.service.impl;
+package com.limei.common.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.limei.auth.domain.entry.UmsRole;
-import com.limei.auth.domain.mapper.UmsRoleMapper;
-import com.limei.auth.domain.service.IUmsRoleService;
+import com.limei.common.domain.entity.UmsRole;
+import com.limei.common.mapper.UmsRoleMapper;
+import com.limei.common.service.IUmsRoleService;
 import org.springframework.stereotype.Service;
 
 @Service
