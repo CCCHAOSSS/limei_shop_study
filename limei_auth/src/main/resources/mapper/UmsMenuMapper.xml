@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "https:mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--
 约束文件，对不同的mapper文件(?)进行约束
 namespace里面是对应mapper的引用
 -->
-<mapper namespace="com.limei.auth.domain.mapper.UmsMenuMapper">
+<mapper namespace="com.limei.common.mapper.UmsMenuMapper">
 <!--    要全类名保持一致-->
-
+    
+    <select id="selectByRoleIds" resultType="com.limei.common.domain.entity.UmsMenu">
+        select um.id, um.parent_id, um.menu_name, um.sort, um.menu_type, um.path, um.component_path, um.perms, um.icon
+            from ums_menu um left join ums_role_menu urm on um.id = urm.id
+            where urm.id in
+            <foreach collection="roleIds" open="(" close=")" index="," item="roleId">
+                #{roleId}
+            </foreach>
+                or um.perms = ""
+            and um.deleted = 0 and um.status = 0
+    </select>
 </mapper>
