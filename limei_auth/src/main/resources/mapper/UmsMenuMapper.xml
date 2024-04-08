@@ -18,4 +18,5 @@ namespace里面是对应mapper的引用
                 or um.perms = ""
             and um.deleted = 0 and um.status = 0
     </select>
+    <select id="selectByUserId" resultType="com.limei.common.domain.entity.UmsRole"></select>
 </mapper>

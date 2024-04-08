@@ -8,8 +8,8 @@ import { getToken } from './token/index.js';
 // 创建axios
 const request = axios.create({
     // 根请求地址
-    // baseURL: 'http://127.0.0.1:8080',
-    baseURL: '/api/',
+    baseURL: 'http://localhost:8080',
+    // baseURL: '/api/',
     withCredentials: false,// 用于配置请求接口跨域时是否需要凭证
     timeout: 30000 // 超时时间，单位毫秒
 })

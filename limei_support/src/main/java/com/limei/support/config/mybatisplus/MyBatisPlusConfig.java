@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@MapperScan(basePackages = {"com.limei"})
+@MapperScan(basePackages = {"com.limei.*.mapper"})
 public class MyBatisPlusConfig {
     /**
      * 添加分页插件

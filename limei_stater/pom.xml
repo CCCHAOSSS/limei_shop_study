@@ -20,12 +20,15 @@
 
     <dependencies>
 
-
         <dependency>
             <groupId>com.limei</groupId>
             <artifactId>limei_auth</artifactId>
         </dependency>
 <!--        还会引入其他业务模块-->
+        <dependency>
+            <groupId>com.limei</groupId>
+            <artifactId>limei_sys_user</artifactId>
+        </dependency>
 
     </dependencies>
 
