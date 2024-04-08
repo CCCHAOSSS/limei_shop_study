@@ -17,9 +17,10 @@ public class LoginUserVO implements UserDetails {
 
     private Long id;
     private String token;
+    private long loginTime;
 
     //用户信息
-    private UmsSysUser sysUser;
+    private UmsSysUser sysUser = new UmsSysUser();
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<String> perms = sysUser.getPerms();

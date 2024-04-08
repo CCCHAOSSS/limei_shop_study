@@ -13,6 +13,7 @@
         <module>limei_support</module>
         <module>limei_auth</module>
         <module>limei_stater</module>
+        <module>limei_sys_user</module>
     </modules>
 
     <!-- 只定义版本-->
@@ -145,6 +146,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.limei</groupId>
+                <artifactId>limei_sys_user</artifactId>
+                <version>${limei.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

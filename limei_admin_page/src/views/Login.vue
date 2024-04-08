@@ -3,7 +3,7 @@
     <div class="login_container">
         <!-- 登陆表单 -->
         <div class="login_form">
-            <h3 class="title">快速开发平台</h3>
+            <h3 class="title">Limei快速开发平台</h3>
             <el-form ref="formRef" :model="loginForm">
                 <!-- 用户名 -->
                 <el-form-item>
@@ -51,7 +51,7 @@
 import { ref } from  'vue';
     // 导入login方法
     import { login } from '@/api/auth/index.js';
-    import {searchSelfRouter,searchSelfInfo} from '@/api/user/index.js';
+    import {searchSelfRouter, searchSelfInfo} from '@/api/user/index.js';
     // 引入token的js
     import { setToken } from '@/utils/token/index.js';
     // 引入store
@@ -61,7 +61,7 @@ import { ref } from  'vue';
     // 引入vue-router
 
      // 构建store
-     const menuStore = useMnuStore();
+    const menuStore = useMnuStore();
     const userStore = useUserStore();
     const router = useRouter();
     // 声明表单绑定值
